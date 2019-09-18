@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <img src="/assets/home_top.png" class="imgTop rounded mx-auto d-block p-5 img-fluid">
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-center p-5">
+            <app-action-block routerLink="/registrar-vendedor" class="cursor-link" [icon]="['far', 'edit']"
+                text="Cadastro de Vendedor" background="background_action_1.png">
+            </app-action-block>
+        </div>
+        <div class="col d-flex justify-content-center p-5">
+            <app-action-block routerLink="/enviar-volume" class="cursor-link" [icon]="['fas', 'gas-pump']"
+                text="Envio de Volume" background="background_action_2.png">
+            </app-action-block>
+        </div>
+    </div>
+
+    <div class="row stepColor">
+        <app-step [steps]="[
+            'Preencha o formulário em \“cadastro de vendedor\”.', 
+            'Em \“Envio de Volumes\” encaminhe o que foi comercializado.',
+            'Agora é só ficar na torcida de ser um dos premiados.'
+            ]">
+        </app-step>
+    </div>
+
+    <div class="row d-flex justify-content-center p-5">
+        <app-button [icon]="['fas', 'chevron-down']">Regulamento</app-button>
+    </div>
+
+    <div class="row">
+        <img src="/assets/home_car.png" class="imgBottom rounded mx-auto d-block p-5 img-fluid">
+    </div>
+
+</div>

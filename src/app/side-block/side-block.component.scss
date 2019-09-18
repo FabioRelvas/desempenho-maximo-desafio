@@ -1,0 +1,19 @@
+.side-block{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+    height: 100%;
+}
+
+.textContent{
+    padding: 24px;
+    p {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+}

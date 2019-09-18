@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row" *ngIf="showConfirmation === false">
+        <div class="col-sm-4 col-12">
+            <app-side-block background='register_background.png' actionBlockText='Cadastro de Vendedor'
+                [actionBlockIcon]="['far', 'edit']">Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa
+                preta cumpadi,
+                sou preto inteiris, inteiris. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
+                Paisis, filhis, espiritis santis. Aenean aliquam molestie leo, vitae iaculis nisl.
+            </app-side-block>
+        </div>
+        <div class="col-12 col-sm-8 justify-content-center p-5">
+            <form [formGroup]="registerForm" (ngSubmit)="sendEmail()" ngNativeValidate>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="cpf">CPF</label> <br />
+                        <input type="text" formControlName="cpf" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="nome">Nome Completo</label> <br />
+                        <input type="text" formControlName="nome" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="cnpj">CNPJ da Concessionária</label><br />
+                        <input type="text" formControlName="cnpj" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label class="styleLabel" for="razaoSocial">Razão Social</label><br />
+                        <input type="text" formControlName="razaoSocial" required />
+                    </div>
+                    <div class="col-4">
+                        <label class="styleLabel" for="uf">UF</label><br />
+                        <input type="text" formControlName="uf" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="email">E-mail</label><br />
+                        <input type="email" formControlName="email" required />
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <label class="styleLabel" for="telefone">Telefone Celular</label><br />
+                        <input type="tel" formControlName="telefone" required />
+                    </div>
+                </div>
+                <div class="row p-5">
+                    <div class="col pt-5">
+                        <app-button routerLink="/" iconSide="left" [icon]="['fas', 'chevron-left']">Voltar</app-button>
+                    </div>
+                    <div class="col pt-5">
+                        <app-button type="submit" [icon]="['fas', 'chevron-right']">Enviar</app-button>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+    <div class="row" *ngIf="showConfirmation === true">
+        <app-form-confirmation confirmationText='Cadastro feito com sucesso'></app-form-confirmation>
+    </div>
+    <div class="row" *ngIf="showConfirmation === false">
+        <img src="/assets/register_car.png" class="rounded mx-auto d-none d-sm-block p-5 img-fluid">
+    </div>
+</div>

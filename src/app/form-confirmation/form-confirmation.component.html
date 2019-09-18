@@ -1,0 +1,26 @@
+<div class="container form-confirmation">
+    <div class="row no-gutters">
+        <div class="col-1 backgroundColumn" [ngStyle]="{'background-color': primaryColor }">
+        </div>
+        <div class="col-2 backgroundColumn" [ngStyle]="{'background-color': secondaryColor }">
+            <img class="form-confirmation-image" src="/assets/confirmation_car.png">
+        </div>
+        <div class="col-8 form-confirmation-content" [ngStyle]="{'background-color': primaryColor + 'cc' }">
+            <div class="container h-100">
+                <div class="row h-50 align-items-center">
+                    <div class="col">
+                        <fa-icon class="fa-6x" [icon]="['far', 'check-circle']"></fa-icon>
+                        <p>{{ confirmationText }}</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <app-button routerLink="/" [icon]="['fas', 'home']" primaryColor="#FFFFFF"
+                        [secondaryColor]="secondaryColor" [textColor]="primaryColor">Voltar à pagina inicial
+                    </app-button>
+                </div>
+            </div>
+        </div>
+        <div class="col-1" [ngStyle]="{'background-color': secondaryColor }"></div>
+    </div>
+</div>

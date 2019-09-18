@@ -1,0 +1,22 @@
+.button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .button-text {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .button-icon {
+        vertical-align: middle;
+        padding: 12px;
+    }
+}

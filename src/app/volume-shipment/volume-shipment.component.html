@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row" *ngIf="showConfirmation === false">
+        <div class="col-sm-4 col-12">
+            <app-side-block background='volume_background.png' actionBlockText='Envio de Volume'
+                [actionBlockIcon]="['fas', 'gas-pump']">Mussum Ipsum, cacilds vidis litro abertis. Não sou faixa
+                preta cumpadi,
+                sou preto inteiris, inteiris. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
+                Paisis, filhis, espiritis santis. Aenean aliquam molestie leo, vitae iaculis nisl.
+            </app-side-block>
+        </div>
+        <div class="col-12 col-sm-8 justify-content-center p-5">
+            <form [formGroup]="volumeForm" (ngSubmit)="sendVolume()" ngNativeValidate>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="cpf">CPF (previamente cadastrado)</label>
+                        <input type="text" name="cpf" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="nome">Nº da Nota Fiscal</label>
+                        <input type="text" name="nome" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="cnpj">Volume (Litros) de Lubrificantes</label>
+                        <input type="text" name="cnpj" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="styleLabel" for="email">Data de Venda</label>
+                        <input type="text" name="email" required />
+                    </div>
+                </div>
+                <div class="row no-gutters align-items-end">
+                    <div class="col-xl-8 col-11">
+                        <label class="styleLabel" for="fotoNotaFiscal">Foto da Nota Fiscal</label>
+                        <input type="text" name="fotoNotaFiscal" required />
+                    </div>
+                    <div class="col-xl-4 col-1">
+                        <label for="file-upload" class="button">
+                            <span class="button-icon">
+                                <fa-icon class="fa-lg" [icon]="['fas', 'image']"></fa-icon>
+                            </span>
+                            <span class="button-text d-none d-xl-inline">Selecionar Foto</span>
+                        </label>
+                        <input id="file-upload" type="file" />
+                    </div>
+                </div>
+                <div class="row p-5">
+                    <div class="col pt-5">
+                        <app-button routerLink="/" iconSide="left" [icon]="['fas', 'chevron-left']">Voltar</app-button>
+                    </div>
+                    <div class="col pt-5">
+                        <app-button [icon]="['fas', 'chevron-right']">Enviar</app-button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="row" *ngIf="showConfirmation === true">
+            <app-form-confirmation confirmationText='Envio feito com sucesso' primaryColor="#294050" secondaryColor="#C9024C"></app-form-confirmation>
+    </div>
+    <div class="row" *ngIf="showConfirmation === false">
+        <img src="/assets/register_car.png" class="rounded mx-auto d-none d-sm-block p-5 img-fluid">
+    </div>   
+</div>

@@ -1,0 +1,12 @@
+<div class="side-block" [ngStyle]="{'background-image': 'url(/assets/' + background + ')'}">
+    <div class="row">
+        <img src="/assets/register_top.png" class="rounded mx-auto d-block p-5 img-fluid">
+    </div>
+    <div class="row justify-content-center">
+        <app-action-block [icon]="actionBlockIcon" [text]="actionBlockText">
+        </app-action-block>
+    </div>
+    <div class="row textContent">
+        <ng-content></ng-content>
+    </div>
+</div>

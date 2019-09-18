@@ -1,0 +1,15 @@
+<button class="button" [type]="type" [ngStyle]="{'color': textColor }">
+    <span class="button-icon" *ngIf="iconSide === 'left'"
+        [ngStyle]="{'background-color': secondaryColor, 'color': iconColor }">
+        <fa-icon class="fa-lg" [icon]="icon"></fa-icon>
+    </span>
+
+    <span class="button-text" [ngStyle]="{'background-color': primaryColor }">
+        <ng-content></ng-content>
+    </span>
+
+    <span class="button-icon" *ngIf="iconSide !== 'left'"
+        [ngStyle]="{'background-color': secondaryColor, 'color': iconColor }">
+        <fa-icon class="fa-lg" [icon]="icon"></fa-icon>
+    </span>
+</button>

@@ -1,0 +1,32 @@
+.action-block {
+    width: 192px;
+    height: 192px;
+    position: relative;
+
+    color: white;
+    text-align: center;
+
+    
+}
+
+.action-block-with-bg {
+    background-color: #294050;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.action-block-content {
+    padding: 24px;
+
+    img {
+        max-width: 64px;
+    }
+
+    p {
+        padding-top: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

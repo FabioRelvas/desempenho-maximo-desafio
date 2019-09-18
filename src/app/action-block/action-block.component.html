@@ -1,0 +1,16 @@
+<div *ngIf="background !== ''" class="action-block action-block-with-bg"
+    [ngStyle]="{'background-image': 'url(/assets/' + background + ')'}">
+
+    <div class="action-block-content">
+        <fa-icon class="fa-3x" [icon]="icon"></fa-icon>
+        <p>{{ text }}</p>
+    </div>
+</div>
+<div *ngIf="background === ''" class="action-block">
+
+
+    <div class="action-block-content">
+        <fa-icon class="fa-3x" [icon]="icon"></fa-icon>
+        <p>{{ text }}</p>
+    </div>
+</div>
