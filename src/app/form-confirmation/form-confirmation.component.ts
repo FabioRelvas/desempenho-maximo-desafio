@@ -10,6 +10,8 @@ export class FormConfirmationComponent implements OnInit {
   @Input() primaryColor = '#C9024C';
   @Input() secondaryColor = '#294050';
   @Input() confirmationText;
+  @Input() textColor = '#C9024C';
+  @Input() backgroundColor = '#FFFFFF'
 
   constructor() { }
 

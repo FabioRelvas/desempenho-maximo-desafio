@@ -15,9 +15,15 @@
                 </div>
 
                 <div class="row justify-content-center">
-                    <app-button routerLink="/" [icon]="['fas', 'home']" primaryColor="#FFFFFF"
-                        [secondaryColor]="secondaryColor" [textColor]="primaryColor">Voltar à pagina inicial
-                    </app-button>
+                        <label routerLink="/" for="file-upload" class="button" >
+                                <span class="button-text" [ngStyle]="{'background-color': backgroundColor, 'color': textColor }">Voltar à página inicial</span>
+                                <span class="button-icon" [ngStyle]="{'background-color': secondaryColor }">
+                                        <fa-icon class="fa-lg" [icon]="['fas', 'home']"></fa-icon>
+                                    </span>
+                            </label>
+                    <!-- <app-button routerLink="/" [icon]="['fas', 'home']" primaryColor="#FFFFFF"
+                        [secondaryColor]="secondaryColor" [textColor]="primaryColor">Voltar à pagina inicial -->
+                    <!-- </app-button> -->
                 </div>
             </div>
         </div>
