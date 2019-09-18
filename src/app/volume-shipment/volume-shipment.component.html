@@ -37,7 +37,7 @@
                 <div class="row no-gutters align-items-end">
                     <div class="col-xl-8 col-11">
                         <label class="styleLabel" for="fotoNotaFiscal">Foto da Nota Fiscal</label>
-                        <input type="text" name="fotoNotaFiscal" required />
+                        <input type="text" name="fotoNotaFiscal" />
                     </div>
                     <div class="col-xl-4 col-1">
                         <label for="file-upload" class="button">
@@ -54,7 +54,7 @@
                         <app-button routerLink="/" iconSide="left" [icon]="['fas', 'chevron-left']">Voltar</app-button>
                     </div>
                     <div class="col pt-5">
-                        <app-button [icon]="['fas', 'chevron-right']">Enviar</app-button>
+                        <app-button type="submit" [icon]="['fas', 'chevron-right']">Enviar</app-button>
                     </div>
                 </div>
 
