@@ -8,30 +8,57 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class VolumeShipmentComponent implements OnInit {
 
-  volumeForm = new FormGroup(
-    {
-      cpf: new FormControl(''),
-      notaFiscal: new FormControl(''),
-      volume: new FormControl(''),
-      dataVenda: new FormControl(''),
-      fotoNota: new FormControl('')
-    }
-  );
+//   volumeForm = new FormGroup(
+//     {
+//       cpf: new FormControl(''),
+//       notaFiscal: new FormControl(''),
+//       volume: new FormControl(''),
+//       dataVenda: new FormControl(''),
+//       fotoNota: new FormControl(''),
+//     }
+//   );
 
-  showConfirmation = false;
+//   showConfirmation = false;
 
-  constructor() { }
+//   constructor() { }
 
-  ngOnInit() {
+//   ngOnInit() {
+//   }
+
+//   sendVolume() {
+//     console.log(this.volumeForm.value);
+
+//     if (this.volumeForm.valid) {
+//       setTimeout(() => {
+//         this.showConfirmation = true;
+//       }, 3000);
+//   }
+// }
+
+volumeForm = new FormGroup(
+  {
+    cpf: new FormControl(''),
+    notaFiscal: new FormControl(''),
+    volume: new FormControl(''),
+    dataVenda: new FormControl(''),
+    fotoNota: new FormControl(''),
   }
+);
 
-  sendVolume() {
-    console.log(this.volumeForm.value);
+showConfirmation = false;
 
-    if (this.volumeForm.valid) {
-      setTimeout(() => {
-        this.showConfirmation = true;
-      }, 3000);
+constructor() { }
+
+ngOnInit() {
+}
+
+sendVolume() {
+  console.log(this.volumeForm.value);
+  
+  if (this.volumeForm.valid) {
+    setTimeout(() => {
+      this.showConfirmation = true;
+    }, 3000);
   }
 }
 }
